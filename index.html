@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold">Menu</h2>
+                <div class="input-group w-50">
+                    <input type="text" id="searchBar" class="form-control" placeholder="Search menu...">
+                    <button class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>
+
+            <div class="row g-3" id="menu-container">
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/espresso.jpg" class="card-img-top item-img" alt="espresso">
+                        <div class="card-body">
+                            <h5 class="card-title">Espresso</h5>
+                            <p class="text-muted">70 PHP</p>
+                            <input type="number" id="qty-espresso" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('espresso', 60, 'qty-espresso')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/americano.jpg" class="card-img-top item-img" alt="americano">
+                        <div class="card-body">
+                            <h5 class="card-title">Americano</h5>
+                            <p class="text-muted">75 PHP</p>
+                            <input type="number" id="qty-americano" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('americano', 20, 'qty-americano')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/latte.jpg" class="card-img-top item-img" alt="latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Latte</h5>
+                            <p class="text-muted">70 PHP</p>
+                            <input type="number" id="qty-latte" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('latte', 25, 'qty-latte')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/capuccino.jpg" class="card-img-top item-img" alt="capuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Capuccino</h5>
+                            <p class="text-muted">80 PHP</p>
+                            <input type="number" id="qty-capuccino" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('capuccino', 20, 'qty-capuccino')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/flatwhite.jpg" class="card-img-top item-img" alt="flatwhite">
+                        <div class="card-body">
+                            <h5 class="card-title">Flat white</h5>
+                            <p class="text-muted">85 PHP</p>
+                            <input type="number" id="qty-flatwhite" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('flatwhite', 20, 'qty-flatwhite')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/mocha.jpg" class="card-img-top item-img" alt="mocha">
+                        <div class="card-body">
+                            <h5 class="card-title">Mocha</h5>
+                            <p class="text-muted">95 PHP</p>
+                            <input type="number" id="qty-mocha" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('mocha', 20, 'qty-mocha')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/machiato.jpg" class="card-img-top item-img" alt="Macchiato">
+                        <div class="card-body">
+                            <h5 class="card-title">Macchiato</h5>
+                            <p class="text-muted">105 PHP</p>
+                            <input type="number" id="qty-Macchiato" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('Macchiato', 20, 'qty-Macchiato')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/coldbrew.jpg" class="card-img-top item-img" alt="Cold Brew">
+                        <div class="card-body">
+                            <h5 class="card-title">Cold Brew</h5>
+                            <p class="text-muted">85 PHP</p>
+                            <input type="number" id="qty-Cold Brew" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('Cold Brew', 20, 'qty-Cold Brew')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/affogato.jpg" class="card-img-top item-img" alt="Affogato">
+                        <div class="card-body">
+                            <h5 class="card-title">Affogato</h5>
+                            <p class="text-muted">130 PHP</p>
+                            <input type="number" id="qty-Affogato" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('Affogato', 20, 'qty-Affogato')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card menu-card h-100 text-center">
+                        <img src="images/vietnameesecoffee.jpg" class="card-img-top item-img" alt="Vietnamese">
+                        <div class="card-body">
+                            <h5 class="card-title">Vietnamese</h5>
+                            <p class="text-muted">125 PHP</p>
+                            <input type="number" id="qty-Vietnamese" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-primary w-100" onclick="addToOrder('Vietnamese', 20, 'qty-Vietnamese')">Add to order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 sidebar p-4">
+            <h2 class="fw-bold mb-4">Ordered Items</h2>
+            <div id="order-list" class="mb-4">
+                </div>
+
+            <div class="total-section">
+                <div class="d-flex justify-content-between mb-3">
+                    <h3 class="fw-bold">Total:</h3>
+                    <h3 class="fw-bold text-primary"><span id="total-amount">0</span> PHP</h3>
+                </div>
+                <input type="number" id="cash-input" class="form-control form-control-lg mb-3" placeholder="Enter Cash">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-success btn-lg flex-grow-1" onclick="processPayment()">Pay!</button>
+                    <button class="btn btn-outline-dark btn-lg" onclick="window.print()">🖨️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
